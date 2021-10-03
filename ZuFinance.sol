@@ -146,7 +146,7 @@ abstract contract ZuFinanceBase is IERC20, Ownable {
         _isExcludedFromFee[owner()] = true;
         _isExcludedFromFee[address(this)] = true;
 
-        IRouter _router = IRouter(0x0305b90023D932A30d0C5B97D5584972e2Dc96DA);
+        IRouter _router = IRouter(0x10ED43C718714eb63d5aA57B78B54704E256024E);
 
          // Create a uniswap pair for this new token
         address _pair = IFactory(_router.factory()).createPair(address(this), _router.WETH());
