@@ -656,7 +656,7 @@ contract ZuFinance is ZuFinanceBase {
     }
 
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner {
-        require(maxTxPercent <= 20, "MaxTxPercent exceeds 20");
+        require(maxTxPercent <= 50, "MaxTxPercent exceeds 50");
         uint256 newMaxTxAmount = _tTotal * maxTxPercent / 10**2;
         maxTxAmount = newMaxTxAmount;
         emit UpdateFee("MaxTx", maxTxAmount, newMaxTxAmount);
